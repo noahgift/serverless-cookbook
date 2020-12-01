@@ -1,3 +1,15 @@
+"""Google Cloud Function
+
+To invoke via the command-line:  
+gcloud functions call changemachine --data '{"amount":"1.34"}'
+
+To invoke via curl
+curl -d '{
+    "amount":"1.34"
+}'     -H "Content-Type: application/json" -X POST <trigger>/function-3
+
+"""
+
 import json
 
 def hello_world(request):
