@@ -9,4 +9,4 @@ Some recipes for doing with serverless technologies
 
 ### GCP
 * Wikipedia Translate Cloud Function
-* Wikipedia Translate Cloud Function CLI
+* Wikipedia Translate Cloud Function (Command-line Tools) CLI
