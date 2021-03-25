@@ -11,6 +11,12 @@ Some recipes for doing with serverless technologies
 
 * [S3 Image Label Bucket](https://github.com/noahgift/serverless-cookbook/blob/main/imagelabels3.py)
 
+By placing an image into an S3 bucket the AWS Lambda triggers an API call to Computer Vision Service
+
+![serverless-image-label](https://user-images.githubusercontent.com/58792/112540085-26259d00-8d88-11eb-9756-36b608a78fcc.png)
+
+
+
 ### GCP
 * Wikipedia Translate Cloud Function
 * Wikipedia Translate Cloud Function (Command-line Tools) CLI
