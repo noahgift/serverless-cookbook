@@ -7,8 +7,10 @@ import wikipedia
 
 from google.cloud import translate
 
-def sample_translate_text(text="YOUR_TEXT_TO_TRANSLATE", 
-    project_id="YOUR_PROJECT_ID", language="fr"):
+
+def sample_translate_text(
+    text="YOUR_TEXT_TO_TRANSLATE", project_id="YOUR_PROJECT_ID", language="fr"
+):
     """Translating Text."""
 
     client = translate.TranslationServiceClient()
@@ -27,22 +29,23 @@ def sample_translate_text(text="YOUR_TEXT_TO_TRANSLATE",
     print(f"You passed in this language {language}")
     # Display the translation for each input text provided
     for translation in response.translations:
-        print(u"Translated text: {}".format(translation.translated_text))
-    return u"Translated text: {}".format(translation.translated_text)
+        print("Translated text: {}".format(translation.translated_text))
+    return "Translated text: {}".format(translation.translated_text)
+
 
 def translate_test(request):
-    """Takes JSON Payload {"entity": "google"}
-    """
+    """Takes JSON Payload {"entity": "google"}"""
     request_json = request.get_json()
     print(f"This is my payload: {request_json}")
-    if request_json and 'entity' in request_json:
-        entity = request_json['entity']
-        language = request_json['language']
-        sentences = request_json['sentences']
+    if request_json and "entity" in request_json:
+        entity = request_json["entity"]
+        language = request_json["language"]
+        sentences = request_json["sentences"]
         print(entity)
         res = wikipedia.summary(entity, sentences=sentences)
-        trans=sample_translate_text(text=res, project_id="cloudai-194723",
-            language=language )
+        trans = sample_translate_text(
+            text=res, project_id="cloudai-194723", language=language
+        )
         return trans
     else:
-        return f'No Payload'
+        return f"No Payload"
