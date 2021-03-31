@@ -1,6 +1,7 @@
 # serverless-cookbook
 Some recipes for doing with serverless technologies
 
+[![Python application test with Github Actions](https://github.com/noahgift/serverless-cookbook/actions/workflows/python-publish.yml/badge.svg)](https://github.com/noahgift/serverless-cookbook/actions/workflows/python-publish.yml)
 
 ### AWS
 * Simple [Marco Polo AWS Lambda](https://github.com/noahgift/serverless-cookbook/blob/main/marcopololambda.py)
